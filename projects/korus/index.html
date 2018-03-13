@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Тестовое задание</title>
+    <meta name="keywords" content="keywords"/>
+    <meta name="description" content="description"/>
+    <meta name="theme-color" content="#ffffff">
+
+    <!--viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <!--modernizr-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if IE]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <link href="css/ie.css" rel="stylesheet" media="all"/>
+    <![endif]-->
+    <!--styles-->
+    <link rel="stylesheet" type="text/css" href="css/app.css?v=1.0"/>
+</head>
+
+<body>
+<div class="wrapper">
+    <section class="timeline">
+        <div class="container">
+            <div class="task">
+                <h3>Задание Timeline</h3>
+                <p>Сверстано несколько состяний компонента "Timeline"</p>
+                <p>В стилизации компонента используется несколько модификаторв:
+                    <br>
+                    <code>"timeline-block"</code> - Базовый цвет
+                    <br>
+                    <code>"timeline-block_progress"</code> - Используется для заполнения зеленым цветом
+                    <br>
+                    <code>"timeline-block_warning"</code> - Используется для заполнения оранжевым цветом
+                    <br>
+                    <code>"timeline-block_danger"</code> - Используется для заполнения красным цвтом
+                    <br>
+                </p>
+                <p>Поинты расположены на линии без использования flexbox.
+                    <br>Для распоожения элементов по ширине используется свойство text-align-last: justify,
+                    работоспообность была проверна в последней версии Chrome,Firefox, Edge, IE 11
+                    <br>Для кроссбраузерности в старых браузеров и Safari используется псевдоэлемент со следующими
+                    стилями:
+                    <br>
+                    <code>:after {
+                        content: '';
+                        display: inline-block;
+                        width: 100%;
+                        height: 0;
+                        visibility: hidden;
+                        overflow: hidden;
+                        }</code>
+                </p>
+                <p>Для стилизации поинтов используются модификаторы:
+                    <br>
+                    <code>timeline-item</code> - Базовый поинт
+                    <br>
+                    <code>timeline-item_success</code> - поинт зеленого цвета
+                    <br>
+                    <code>timeline-item_warning</code> - поинт оранжевого цвета
+                    <br>
+                    <code>timeline-item_danger</code> - поинт красного цвета
+                    <br>
+                </p>
+            </div>
+            <!--timeline block-->
+            <ul class="timeline-block">
+                <li class="timeline-item">step first</li>
+                <li class="timeline-item">step middle</li>
+                <li class="timeline-item">step last</li>
+            </ul>
+            <!--timeline block progress-->
+            <ul class="timeline-block timeline-block_progress">
+                <li class="timeline-item timeline-item_success">step first success</li>
+                <li class="timeline-item timeline-item_success">step progress</li>
+                <li class="timeline-item">step last</li>
+            </ul>
+
+            <!--timeline block warning-->
+            <ul class="timeline-block timeline-block_progress timeline-block_warning">
+                <li class="timeline-item timeline-item_success">step first success</li>
+                <li class="timeline-item timeline-item_warning">step warning</li>
+                <li class="timeline-item">step last</li>
+            </ul>
+
+            <!--timeline block danger-->
+            <ul class="timeline-block timeline-block_progress timeline-block_danger">
+                <li class="timeline-item timeline-item_success">step first success</li>
+                <li class="timeline-item timeline-item_danger">step danger</li>
+                <li class="timeline-item">step last</li>
+            </ul>
+        </div>
+    </section>
+    <section class="diagram">
+        <div class="container">
+            <div class="task">
+                <h3>Задание диаграмма</h3>
+                <p>Для выполнения задания была использована grid-система с помощью свойства <code>float:</code> c
+                    колонками по 50% (В задаче условие без Flexbox)</p>
+                <p>Диаграма расположена по центру блока с помощью <code>absolute</code>.
+                    <br>Так же был рассмотрен вариант создания диаграмы с помощью SVG, при необходимости могу
+                    реализовать.
+                    <br>Имею небольшой опыт с библиотекой Chart.js</p>
+            </div>
+        </div>
+        <div class="container ">
+            <!--GRID-->
+            <div class="row clearfix">
+                <div class="col">
+                    <!--diagram-item-->
+                    <div class="diagram-item">
+                        <h3 class="diagram-item__title">Организационно правовые риски</h3>
+                        <p>Статус компании, массовые адреса, руководители и учередители, время существования
+                            организации</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <!--diagram-item-->
+                    <div class="diagram-item">
+                        <h3 class="diagram-item__title diagram-item__title_red">Финансы</h3>
+                        <p>Статус компании, массовые адреса, руководители и учередители, время существования
+                            организации</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="diagram-item">
+                        <h3 class="diagram-item__title">Госконтракты</h3>
+                        <p>Выигранные, отмененные и исполненые госконтракты</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <!--diagram-item-->
+                    <div class="diagram-item">
+                        <h3 class="diagram-item__title diagram-item__title_orange">Деловые риски</h3>
+                        <p>Сообщения о банкротстве, арбитражные дела, реестр недобросовестных поставщиков</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diagram-block">
+                <div class="diagram-block__item diagram-block__item_green"></div>
+                <div class="diagram-block__item diagram-block__item_green"></div>
+                <div class="diagram-block__item diagram-block__item_red"></div>
+                <div class="diagram-block__item diagram-block__item_orange"></div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+
+</html>
